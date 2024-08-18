@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00225b"
+        android:text="Cadastro"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome completo"
+        android:paddingTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblCadastro" />
+
+    <EditText
+        android:id="@+id/txtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblNome" />
+
+    <TextView
+        android:id="@+id/lblTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:paddingTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNome" />
+
+    <EditText
+        android:id="@+id/txtTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblTelefone" />
+
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        android:paddingTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTelefone" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblEmail" />
+
+    <CheckBox
+        android:id="@+id/checkAssinante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingressar na lista de e-mails?"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail" />
+
+    <RadioGroup
+        android:id="@+id/rgSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkAssinante">
+
+        <RadioButton
+            android:id="@+id/checkMasc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/checkFem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="Feminino" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblCidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cidade"
+        android:paddingTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgSexo" />
+
+    <EditText
+        android:id="@+id/txtCidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblCidade" />
+
+    <TextView
+        android:id="@+id/lblUf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UF"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCidade" />
+
+    <Spinner
+        android:id="@+id/selectUf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblUf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectUf" >
+
+        <Button
+            android:id="@+id/btnLimpar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00225b"
+            android:textColor="@color/white"
+            android:text="Limpar"/>
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00225b"
+            android:textColor="@color/white"
+            android:text="Salvar" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
